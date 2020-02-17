@@ -1,5 +1,5 @@
 CC = g++
-OBJS = test1.o
+OBJS = test1.o test2.o
 
 all: test
 
@@ -11,5 +11,5 @@ test: $(OBJS)
 
 .PHONY: clean
 clean:
-	rm *.o`
+	rm *.o
 
