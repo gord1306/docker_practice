@@ -1,13 +1,14 @@
 CC = g++
+GVER = -std=c++11
 OBJS = test1.o test2.o
 
 all: test
 
 %.o: %.cpp
-	$(CC) -c -o $@ $<
+	$(CC) $(GVER) -c $< -o $@
 
 test: $(OBJS)
-	$(CC) -o test $^
+	$(CC) $(GVER) $^ -o test
 
 .PHONY: clean
 clean:
